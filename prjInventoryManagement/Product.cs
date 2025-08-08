@@ -23,7 +23,7 @@ namespace prjInventoryManagement
 
         public static List<Product> FilterLowStockProducts(this List<Product> products, int lowStock)
         {
-            //Filter products that are low in stock
+            //Filter products that are low in stock 10 or less
             return products.Where(p => p.quantity <= lowStock).ToList();
         }
     }
