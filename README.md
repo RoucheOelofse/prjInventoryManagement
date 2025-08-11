@@ -1,9 +1,5 @@
 ## Pointer Types
-Pointer types are used to store the memory address of a variable. They are used in unsafe code, which is code that is not subject to the normal safety rules of C#.
-
-Pointer types are used when working with legacy code, performance-critical code, or when interacting with native code.
-
-Pointer types require an unsafe context because they can potentially lead to memory corruption or other safety issues if not used correctly.
+Pointer types are used to store the memory address of a variable. They are used in unsafe code, which is code that is not subject to the normal safety rules of C#. Pointer types require an unsafe context because they can potentially lead to memory corruption or other safety issues if not used correctly.
 
 ---
 ## Reference List:
