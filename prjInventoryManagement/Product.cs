@@ -11,11 +11,11 @@ namespace prjInventoryManagement
         public int Id { get; set; }
         public string Name { get; set; }
         public int quantity { get; set; }
-        public decimal price { get; set; }
+        public decimal price { get; set; } //(Tutorialspoints, 2025)
     }
     public static class ProductExtention //Extention method
     {
-        public static decimal CalculateTotalValue(this List<Product> products)
+        public static decimal CalculateTotalValue(this List<Product> products) //(C# corner, 2023)
         {
             //Calculate the total value
             return products.Sum(p => p.quantity * p.price);

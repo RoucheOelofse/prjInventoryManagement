@@ -10,7 +10,7 @@ namespace prjInventoryManagement
             {
                 new Product{Id = 1, Name ="Water", quantity = 10, price = 50},
                 new Product{Id = 2, Name ="Kfc", quantity = 23, price = 150},
-                new Product{Id = 3, Name ="Pizza", quantity = 12, price = 30},
+                new Product{Id = 3, Name ="Pizza", quantity = 12, price = 30}, //(Microsoft Learn, 2025)
             };
             //LinQ to select product names & prices
             var productNamesAndPrice = products.Select(p => new { p.Name, p.price, p.quantity }).ToList();
@@ -19,13 +19,13 @@ namespace prjInventoryManagement
             foreach (var product in productNamesAndPrice)
             {
                 Console.WriteLine($"Name: {product.Name}, Price: {product.price}, Quantity: {product.quantity}");
-            }
+            } //(Microsoft Learn, 2025)
 
             decimal totalValue = products.CalculateTotalValue();
             Console.WriteLine($"Total Value: {totalValue}");
 
-            //Method to check the low stock product
-            List<Product> lowStockProducts = products.FilterLowStockProducts(10);
+            //Extention method to check the low stock product
+            List<Product> lowStockProducts = products.FilterLowStockProducts(10); //(C# corner, 2023)
             foreach (var product in lowStockProducts)
             {
                 Console.WriteLine($"Low in stock: {product.Name}");
